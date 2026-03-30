@@ -1,0 +1,1 @@
+suacalis.github.io/soru_grup_eslestir web sayfasından ulaşabilirsiniz
