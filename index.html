@@ -21056,7 +21056,7 @@ async function exportDOCX(){
         properties:{page:{size:{width:12240,height:15840},margin:{top:1440,right:1440,bottom:1440,left:1440}}},
         children:[
           new Paragraph({alignment:AlignmentType.CENTER,spacing:{after:60},
-            children:[new TextRun({text:'İK ANALİTİĞİ DERSİ — VİZE SINAVI',bold:true,size:32,font:'Calibri',color:'1F4E79'})]}),
+            children:[new TextRun({text:'SINAV',bold:true,size:32,font:'Calibri',color:'1F4E79'})]}),
           new Paragraph({alignment:AlignmentType.CENTER,spacing:{after:40},
             children:[new TextRun({text:'2024-2025 Öğretim Yılı Bahar Dönemi',size:22,font:'Calibri',color:'4A4A4A'})]}),
           new Paragraph({alignment:AlignmentType.CENTER,spacing:{after:320},
@@ -21124,9 +21124,9 @@ async function exportPDF(){
     // Title block
     pdf.setFont('helvetica','bold');
     pdf.setFontSize(16);pdf.setTextColor(...C_DARK);
-    pdf.text('İK ANALİTİĞİ DERSİ — VİZE SINAVI',105,18,{align:'center'});
+    pdf.text('SINAV',105,18,{align:'center'});
     pdf.setFontSize(10);pdf.setFont('helvetica','normal');pdf.setTextColor(...C_GRAY);
-    pdf.text('2024-2025 Öğretim Yılı Bahar Dönemi',105,24,{align:'center'});
+    pdf.text('Öğretim Yılı',105,24,{align:'center'});
     pdf.setFontSize(11);pdf.setFont('helvetica','bold');pdf.setTextColor(...C_BLUE);
     pdf.text('B Grubu \u2194 A Grubu Soru Eşleştirme Sonuçları',105,30,{align:'center'});
     pdf.setDrawColor(...C_BLUE);pdf.setLineWidth(0.4);pdf.line(14,32,196,32);
@@ -21175,7 +21175,7 @@ async function exportPDF(){
     for(let i=1;i<=pageCount;i++){
       pdf.setPage(i);
       pdf.setFontSize(7);pdf.setTextColor(160,160,160);
-      pdf.text(`İK Analitiği Soru Eşleştirici  |  Sayfa ${i}/${pageCount}`,105,291,{align:'center'});
+      pdf.text(`Soru Eşleştirici  |  Sayfa ${i}/${pageCount}`,105,291,{align:'center'});
     }
     pdf.save('ik_eslestirme.pdf');
   }catch(e){showError('PDF hatası: '+e.message);console.error(e);}
